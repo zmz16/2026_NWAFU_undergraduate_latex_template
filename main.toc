@@ -1,0 +1,119 @@
+\contentsline {chapter}{摘要}{I}{section*.1}%
+\contentsline {chapter}{Abstract}{III}{section*.2}%
+\contentsline {chapter}{目次}{V}{section*.3}%
+\contentsline {chapter}{插图和附表清单}{IX}{chapter*.5}%
+\contentsline {chapter}{主要符号注释表}{X}{chapter*.6}%
+\contentsline {chapter}{术语表}{XI}{chapter*.7}%
+\contentsline {chapter}{第1章\hspace {0.5\ccwd }快速上手}{1}{chapter.1}%
+\contentsline {section}{1.1\hspace {0.5\ccwd }欢迎}{1}{section.1.1}%
+\contentsline {section}{1.2\hspace {0.5\ccwd }\LaTeX 环境准备}{1}{section.1.2}%
+\contentsline {section}{1.3\hspace {0.5\ccwd }模板使用}{1}{section.1.3}%
+\contentsline {subsection}{1.3.1\hspace {0.5\ccwd }工作流}{1}{subsection.1.3.1}%
+\contentsline {subsection}{1.3.2\hspace {0.5\ccwd }视觉识别系统图标}{2}{subsection.1.3.2}%
+\contentsline {section}{1.4\hspace {0.5\ccwd }开始写作}{2}{section.1.4}%
+\contentsline {section}{1.5\hspace {0.5\ccwd }打印论文}{3}{section.1.5}%
+\contentsline {chapter}{第2章\hspace {0.5\ccwd }插图与表格}{4}{chapter.2}%
+\contentsline {section}{2.1\hspace {0.5\ccwd }插图}{4}{section.2.1}%
+\contentsline {subsection}{2.1.1\hspace {0.5\ccwd }图片格式}{4}{subsection.2.1.1}%
+\contentsline {subsection}{2.1.2\hspace {0.5\ccwd }插图浮动体}{5}{subsection.2.1.2}%
+\contentsline {subsection}{2.1.3\hspace {0.5\ccwd }子图排版}{5}{subsection.2.1.3}%
+\contentsline {subsection}{2.1.4\hspace {0.5\ccwd }双语题注排版}{5}{subsection.2.1.4}%
+\contentsline {subsection}{2.1.5\hspace {0.5\ccwd }超宽插图排版(卧图)}{6}{subsection.2.1.5}%
+\contentsline {section}{2.2\hspace {0.5\ccwd }表格}{8}{section.2.2}%
+\contentsline {subsection}{2.2.1\hspace {0.5\ccwd }内置表格排版环境}{8}{subsection.2.2.1}%
+\contentsline {subsection}{2.2.2\hspace {0.5\ccwd }表格浮动体}{8}{subsection.2.2.2}%
+\contentsline {subsection}{2.2.3\hspace {0.5\ccwd }跨页长表格}{8}{subsection.2.2.3}%
+\contentsline {subsection}{2.2.4\hspace {0.5\ccwd }表格的双语题注}{9}{subsection.2.2.4}%
+\contentsline {subsection}{2.2.5\hspace {0.5\ccwd }超宽表格排版(卧表)}{9}{subsection.2.2.5}%
+\contentsline {subsection}{2.2.6\hspace {0.5\ccwd }表格自动生成}{14}{subsection.2.2.6}%
+\contentsline {section}{2.3\hspace {0.5\ccwd }用tabularray宏包排版表格}{15}{section.2.3}%
+\contentsline {subsection}{2.3.1\hspace {0.5\ccwd }用\texttt {tblr}环境排版简单表格}{15}{subsection.2.3.1}%
+\contentsline {subsection}{2.3.2\hspace {0.5\ccwd }用\texttt {longtblr}环境排版跨页长表格}{15}{subsection.2.3.2}%
+\contentsline {subsection}{2.3.3\hspace {0.5\ccwd }用\texttt {booktabs}环境三线表}{17}{subsection.2.3.3}%
+\contentsline {section}{2.4\hspace {0.5\ccwd }为表格添加数据来源说明}{17}{section.2.4}%
+\contentsline {subsection}{2.4.1\hspace {0.5\ccwd }用tabularray宏包的talltblr环境添加数据来源说明}{17}{subsection.2.4.1}%
+\contentsline {subsection}{2.4.2\hspace {0.5\ccwd }用threeparttable宏包添加数据来源说明}{17}{subsection.2.4.2}%
+\contentsline {section}{2.5\hspace {0.5\ccwd }图表浮动体}{18}{section.2.5}%
+\contentsline {section}{2.6\hspace {0.5\ccwd }数字与国际单位}{18}{section.2.6}%
+\contentsline {section}{2.7\hspace {0.5\ccwd }中英文之间空格}{19}{section.2.7}%
+\contentsline {chapter}{第3章\hspace {0.5\ccwd }数学公式}{20}{chapter.3}%
+\contentsline {section}{3.1\hspace {0.5\ccwd }学习资源}{20}{section.3.1}%
+\contentsline {section}{3.2\hspace {0.5\ccwd }公式排版与注解}{20}{section.3.2}%
+\contentsline {section}{3.3\hspace {0.5\ccwd }模板提供的数学环境}{20}{section.3.3}%
+\contentsline {subsection}{3.3.1\hspace {0.5\ccwd }axiom公理环境}{20}{subsection.3.3.1}%
+\contentsline {subsection}{3.3.2\hspace {0.5\ccwd }corollary推论环境}{21}{subsection.3.3.2}%
+\contentsline {subsection}{3.3.3\hspace {0.5\ccwd }definition定义环境}{21}{subsection.3.3.3}%
+\contentsline {subsection}{3.3.4\hspace {0.5\ccwd }example示例环境}{21}{subsection.3.3.4}%
+\contentsline {subsection}{3.3.5\hspace {0.5\ccwd }lemma引理环境}{22}{subsection.3.3.5}%
+\contentsline {subsection}{3.3.6\hspace {0.5\ccwd }proof证明环境}{22}{subsection.3.3.6}%
+\contentsline {subsection}{3.3.7\hspace {0.5\ccwd }theorem定理环境}{22}{subsection.3.3.7}%
+\contentsline {section}{3.4\hspace {0.5\ccwd }交叉引用}{22}{section.3.4}%
+\contentsline {chapter}{第4章\hspace {0.5\ccwd }参考文献}{23}{chapter.4}%
+\contentsline {section}{4.1\hspace {0.5\ccwd }正文中参考文献的引用}{23}{section.4.1}%
+\contentsline {subsection}{4.1.1\hspace {0.5\ccwd }著者作为引用主语}{23}{subsection.4.1.1}%
+\contentsline {subsection}{4.1.2\hspace {0.5\ccwd }提及内容未提及著者}{23}{subsection.4.1.2}%
+\contentsline {subsection}{4.1.3\hspace {0.5\ccwd }同一著者不同年份出版多篇文献}{23}{subsection.4.1.3}%
+\contentsline {subsection}{4.1.4\hspace {0.5\ccwd }两著者文献}{23}{subsection.4.1.4}%
+\contentsline {subsection}{4.1.5\hspace {0.5\ccwd }三个以上著者文献}{24}{subsection.4.1.5}%
+\contentsline {subsection}{4.1.6\hspace {0.5\ccwd }同一处引用多篇文献}{24}{subsection.4.1.6}%
+\contentsline {subsection}{4.1.7\hspace {0.5\ccwd }多次引用同一著者的同一文献}{24}{subsection.4.1.7}%
+\contentsline {section}{4.2\hspace {0.5\ccwd }参考文献列表}{24}{section.4.2}%
+\contentsline {section}{4.3\hspace {0.5\ccwd }参考文献数据文件准备}{24}{section.4.3}%
+\contentsline {section}{4.4\hspace {0.5\ccwd }交叉引用}{25}{section.4.4}%
+\contentsline {chapter}{第5章\hspace {0.5\ccwd }多级标题}{26}{chapter.5}%
+\contentsline {section}{5.1\hspace {0.5\ccwd }演示一级标题}{26}{section.5.1}%
+\contentsline {subsection}{5.1.1\hspace {0.5\ccwd }演示二级标题}{26}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 1\tex _char:D "FF09\scan _stop: }演示三级标题}{26}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 2\tex _char:D "FF09\scan _stop: }再次演示三级标题}{26}{subsubsection.5.1.1.2}%
+\contentsline {subsection}{5.1.2\hspace {0.5\ccwd }另一个示二级标题}{26}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 1\tex _char:D "FF09\scan _stop: }另一个三级标题}{26}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 2\tex _char:D "FF09\scan _stop: }还有一个三级标题}{26}{subsubsection.5.1.2.2}%
+\contentsline {section}{5.2\hspace {0.5\ccwd }演示一级标题}{26}{section.5.2}%
+\contentsline {subsection}{5.2.1\hspace {0.5\ccwd }演示二级标题}{26}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 1\tex _char:D "FF09\scan _stop: }演示三级标题}{26}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 2\tex _char:D "FF09\scan _stop: }再次演示三级标题}{26}{subsubsection.5.2.1.2}%
+\contentsline {subsection}{5.2.2\hspace {0.5\ccwd }另一个示二级标题}{26}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 1\tex _char:D "FF09\scan _stop: }另一个三级标题}{26}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {\tex _char:D "FF08\scan _stop: 2\tex _char:D "FF09\scan _stop: }还有一个三级标题}{26}{subsubsection.5.2.2.2}%
+\contentsline {chapter}{第6章\hspace {0.5\ccwd }结论与展望}{27}{chapter.6}%
+\contentsline {section}{6.1\hspace {0.5\ccwd }结果}{27}{section.6.1}%
+\contentsline {section}{6.2\hspace {0.5\ccwd }展望}{27}{section.6.2}%
+\contentsline {chapter}{参考文献}{28}{chapter*.24}%
+\contentsline {chapter}{附录 A\hspace {0.5\ccwd }查重和其他注意事项}{29}{appendix.A}%
+\contentsline {section}{A.1\hspace {0.5\ccwd }查重}{29}{section.A.1}%
+\contentsline {section}{A.2\hspace {0.5\ccwd }批注}{29}{section.A.2}%
+\contentsline {section}{A.3\hspace {0.5\ccwd }毕业设计与毕业论文的区别}{29}{section.A.3}%
+\contentsline {section}{A.4\hspace {0.5\ccwd }单面打印\& 双面打印}{29}{section.A.4}%
+\contentsline {section}{A.5\hspace {0.5\ccwd }封面打印\& 装订}{29}{section.A.5}%
+\contentsline {section}{A.6\hspace {0.5\ccwd }批注}{29}{section.A.6}%
+\contentsline {section}{A.7\hspace {0.5\ccwd }毕业设计与毕业论文的区别}{30}{section.A.7}%
+\contentsline {section}{A.8\hspace {0.5\ccwd }单面打印\& 双面打印}{30}{section.A.8}%
+\contentsline {section}{A.9\hspace {0.5\ccwd }封面打印\& 装订}{30}{section.A.9}%
+\contentsline {section}{A.10\hspace {0.5\ccwd }批注}{30}{section.A.10}%
+\contentsline {section}{A.11\hspace {0.5\ccwd }毕业设计与毕业论文的区别}{30}{section.A.11}%
+\contentsline {section}{A.12\hspace {0.5\ccwd }单面打印\& 双面打印}{30}{section.A.12}%
+\contentsline {section}{A.13\hspace {0.5\ccwd }封面打印\& 装订}{30}{section.A.13}%
+\contentsline {section}{A.14\hspace {0.5\ccwd }批注}{31}{section.A.14}%
+\contentsline {section}{A.15\hspace {0.5\ccwd }毕业设计与毕业论文的区别}{31}{section.A.15}%
+\contentsline {section}{A.16\hspace {0.5\ccwd }单面打印\& 双面打印}{31}{section.A.16}%
+\contentsline {section}{A.17\hspace {0.5\ccwd }封面打印\& 装订}{31}{section.A.17}%
+\contentsline {section}{A.18\hspace {0.5\ccwd }批注}{31}{section.A.18}%
+\contentsline {section}{A.19\hspace {0.5\ccwd }毕业设计与毕业论文的区别}{31}{section.A.19}%
+\contentsline {section}{A.20\hspace {0.5\ccwd }单面打印\& 双面打印}{32}{section.A.20}%
+\contentsline {section}{A.21\hspace {0.5\ccwd }封面打印\& 装订}{32}{section.A.21}%
+\contentsline {section}{A.22\hspace {0.5\ccwd }附录的图表}{32}{section.A.22}%
+\contentsline {section}{A.23\hspace {0.5\ccwd }附录中的公式}{32}{section.A.23}%
+\contentsline {chapter}{附录 B\hspace {0.5\ccwd }后记}{33}{appendix.B}%
+\contentsline {section}{B.1\hspace {0.5\ccwd }吐槽}{33}{section.B.1}%
+\contentsline {section}{B.2\hspace {0.5\ccwd }明天}{33}{section.B.2}%
+\contentsline {section}{B.3\hspace {0.5\ccwd }吐槽}{33}{section.B.3}%
+\contentsline {section}{B.4\hspace {0.5\ccwd }明天}{33}{section.B.4}%
+\contentsline {section}{B.5\hspace {0.5\ccwd }吐槽}{34}{section.B.5}%
+\contentsline {section}{B.6\hspace {0.5\ccwd }明天}{34}{section.B.6}%
+\contentsline {section}{B.7\hspace {0.5\ccwd }吐槽}{34}{section.B.7}%
+\contentsline {section}{B.8\hspace {0.5\ccwd }明天}{34}{section.B.8}%
+\contentsline {section}{B.9\hspace {0.5\ccwd }吐槽}{34}{section.B.9}%
+\contentsline {section}{B.10\hspace {0.5\ccwd }明天}{35}{section.B.10}%
+\contentsline {chapter}{致谢}{36}{appendix*.27}%
+\contentsline {chapter}{作者简历}{42}{appendix*.28}%
+\contentsfinish 

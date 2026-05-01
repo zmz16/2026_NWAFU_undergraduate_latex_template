@@ -1,0 +1,193 @@
+% 本文件是示例论文的一部分
+% 论文的主文件位于上级目录的 `main.tex`
+\chapter{数学公式}
+
+数学公式是\LaTeX{}排版中举世闻名的强项，关于数学公式的排版。在此，本文无意
+展开讨论\LaTeX{}中的数学公式排版。只是重点说明一下由 \nwafuthesis{} 提供的
+特有的宏。
+
+\section{学习资源}
+
+对于数学公式的排版在\enquote{lshort-zh-cn.pdf}的第四章给出了基本的使用方法，
+请大家阅读学习。其内容对大多数人来说已经足够用了，但是如果不能解决问题的话
+建议大家求助于搜索引擎或者有经验的人，这也不失为一个好办法。
+
+常见的几个学习\LaTeX{}数学公式排版的资源链接如下：
+
+\begin{itemize}
+  \item 数学排版常见问题集:
+        \url{https://www.latexstudio.net/index/details/index/mid/635}
+  \item \pkg{amsmath}手册中译:
+        \url{https://www.latexstudio.net/index/details/index/mid/706}
+  \item \LaTeX{}公式备忘单:
+        \url{https://www.latexstudio.net/index/details/index/mid/1052.html}
+\end{itemize}
+
+\section{公式排版与注解}
+
+按我校学位论文排版要求，公式排版需要行间居中排版，公式编号按照一级标题(章)
+连续编号(按章)并加小括号，不加导引线。类似这些细节\nwafuthesis{}模板都已进
+行了设置。在撰写论文中只要将公式置于\env{equation}环境，并用\cs{label}命令
+添加标签后用\cs{ref}或\cs{eqref}命令引用该公式即可。对于多行公式可以在
+\env{equation}环境中使用\env{aligned}环境实现排版。
+
+需要注意的是，公式解释下面的\enquote{式中}两字需要左起顶格编排，后接符号及
+其解释；解释顺序为先左后右，先上后下；解释与解释之间用中文分号“；”分隔。
+此时可以用\cs{noindent}命令临时取消首行缩进，在解释完公式符号后，再次正常
+用空行进行分段便可自动恢复段落首行缩进。
+
+例如：勾股定理可以表示为\ref{eq:gougu}
+
+\begin{equation}
+  a^2+b^2=c^2\label{eq:gougu}
+\end{equation}
+
+\noindent
+式中，$a$是一条直角边边长；$b$是另一条直角边边长；$c$是斜边边长。
+
+在公式解释结束后，段落缩进应复位至首行缩进2个汉字的模式。
+
+\section{模板提供的数学环境}
+
+\nwafuthesis{} 提供了一系列预定义的数学环境，详情见\nwafuthesis{}说明书的表6。
+其使用样例有以下7种形式。
+
+\subsection{axiom公理环境}
+
+\begin{axiom}[欧几里得距离]
+点$\mathbf{p}$与点$\mathbf{q}$的\textbf{欧几里德距离}，是连接两点的线段
+($\overline{\mathbf{pq}}$)的长度。
+
+在笛卡尔坐标系下，如果 $n$维欧几里得空间下的两个点 $\mathbf{p}=(p_1, p_2,
+\dots, p_n)$ 与点$\mathbf{q} = (q_1, q_2, q_3, \dots, q_n)$，那么点$\mathbf{p}$
+与点$\mathbf{q}$的距离，或者点$\mathbf{q}$与点$\mathbf{p}$的距离，由
+\autoref{equ:1}定义：
+\begin{align}
+d(\mathbf{p},\mathbf{q}) = d(\mathbf{q},\mathbf{p}) & = \sqrt{(q_1-p_1)^2
+                         + (q_2-p_2)^2 + \cdots + (q_n-p_n)^2} \notag \\
+\label{equ:1}
+& = \sqrt{\sum_{i=1}^n (q_i-p_i)^2}
+\end{align}
+\end{axiom}
+
+\subsection{corollary推论环境}
+
+\begin{corollary}[欧几里得距离]
+点$\mathbf{p}$与点$\mathbf{q}$的\textbf{欧几里德距离}，是连接两点的线段
+($\overline{\mathbf{pq}}$)的长度。
+
+在笛卡尔坐标系下，如果 $n$维欧几里得空间下的两个点 $\mathbf{p}=(p_1, p_2,
+\dots, p_n)$ 与点$\mathbf{q} = (q_1, q_2, q_3, \dots, q_n)$，那么点$\mathbf{p}$
+与点$\mathbf{q}$的距离，或者点$\mathbf{q}$与点$\mathbf{p}$的距离，由
+\autoref{equ:2}定义：
+\begin{align}
+d(\mathbf{p},\mathbf{q}) = d(\mathbf{q},\mathbf{p}) & = \sqrt{(q_1-p_1)^2
+                         + (q_2-p_2)^2 + \cdots + (q_n-p_n)^2} \notag \\
+\label{equ:2}
+& = \sqrt{\sum_{i=1}^n (q_i-p_i)^2}
+\end{align}
+\end{corollary}
+
+\subsection{definition定义环境}
+
+\begin{definition}[欧几里得距离]
+点$\mathbf{p}$与点$\mathbf{q}$的\textbf{欧几里德距离}，是连接两点的线段
+($\overline{\mathbf{pq}}$)的长度。
+
+在笛卡尔坐标系下，如果 $n$维欧几里得空间下的两个点 $\mathbf{p}=(p_1, p_2,
+\dots, p_n)$ 与点$\mathbf{q} = (q_1, q_2, q_3, \dots, q_n)$，那么点$\mathbf{p}$
+与点$\mathbf{q}$的距离，或者点$\mathbf{q}$与点$\mathbf{p}$的距离，由
+\autoref{equ:3}定义：
+\begin{align}
+d(\mathbf{p},\mathbf{q}) = d(\mathbf{q},\mathbf{p}) & = \sqrt{(q_1-p_1)^2
+                         + (q_2-p_2)^2 + \cdots + (q_n-p_n)^2} \notag \\
+\label{equ:3}
+& = \sqrt{\sum_{i=1}^n (q_i-p_i)^2}
+\end{align}
+\end{definition}
+
+\subsection{example示例环境}
+
+\begin{example}[欧几里得距离]
+点$\mathbf{p}$与点$\mathbf{q}$的\textbf{欧几里德距离}，是连接两点的线段
+($\overline{\mathbf{pq}}$)的长度。
+
+在笛卡尔坐标系下，如果 $n$维欧几里得空间下的两个点 $\mathbf{p}=(p_1, p_2,
+\dots, p_n)$ 与点$\mathbf{q} = (q_1, q_2, q_3, \dots, q_n)$，那么点$\mathbf{p}$
+与点$\mathbf{q}$的距离，或者点$\mathbf{q}$与点$\mathbf{p}$的距离，由
+\autoref{equ:4}定义：
+\begin{align}
+d(\mathbf{p},\mathbf{q}) = d(\mathbf{q},\mathbf{p}) & = \sqrt{(q_1-p_1)^2
+                         + (q_2-p_2)^2 + \cdots + (q_n-p_n)^2} \notag \\
+\label{equ:4}
+& = \sqrt{\sum_{i=1}^n (q_i-p_i)^2}
+\end{align}
+\end{example}
+
+\subsection{lemma引理环境}
+
+\begin{lemma}[欧几里得距离]
+点$\mathbf{p}$与点$\mathbf{q}$的\textbf{欧几里德距离}，是连接两点的线段
+($\overline{\mathbf{pq}}$)的长度。
+
+在笛卡尔坐标系下，如果 $n$维欧几里得空间下的两个点 $\mathbf{p}=(p_1, p_2,
+\dots, p_n)$ 与点$\mathbf{q} = (q_1, q_2, q_3, \dots, q_n)$，那么点$\mathbf{p}$
+与点$\mathbf{q}$的距离，或者点$\mathbf{q}$与点$\mathbf{p}$的距离，由
+\autoref{equ:5}定义：
+\begin{align}
+d(\mathbf{p},\mathbf{q}) = d(\mathbf{q},\mathbf{p}) & = \sqrt{(q_1-p_1)^2
+                         + (q_2-p_2)^2 + \cdots + (q_n-p_n)^2} \notag \\
+\label{equ:5}
+& = \sqrt{\sum_{i=1}^n (q_i-p_i)^2}
+\end{align}
+\end{lemma}
+
+\subsection{proof证明环境}
+
+\begin{proof}[欧几里得距离]
+点$\mathbf{p}$与点$\mathbf{q}$的\textbf{欧几里德距离}，是连接两点的线段
+($\overline{\mathbf{pq}}$)的长度。
+
+在笛卡尔坐标系下，如果 $n$维欧几里得空间下的两个点 $\mathbf{p}=(p_1, p_2,
+\dots, p_n)$ 与点$\mathbf{q} = (q_1, q_2, q_3, \dots, q_n)$，那么点$\mathbf{p}$
+与点$\mathbf{q}$的距离，或者点$\mathbf{q}$与点$\mathbf{p}$的距离，由
+\autoref{equ:6}定义：
+\begin{align}
+d(\mathbf{p},\mathbf{q}) = d(\mathbf{q},\mathbf{p}) & = \sqrt{(q_1-p_1)^2
+                         + (q_2-p_2)^2 + \cdots + (q_n-p_n)^2} \notag \\
+\label{equ:6}
+& = \sqrt{\sum_{i=1}^n (q_i-p_i)^2}
+\end{align}
+\end{proof}
+
+证明与其他定理环境稍有不同， 末尾会有一个 QED 符号。
+
+\subsection{theorem定理环境}
+
+\begin{theorem}[欧几里得距离]
+点$\mathbf{p}$与点$\mathbf{q}$的\textbf{欧几里德距离}，是连接两点的线段
+($\overline{\mathbf{pq}}$)的长度。
+
+在笛卡尔坐标系下，如果 $n$维欧几里得空间下的两个点 $\mathbf{p}=(p_1, p_2,
+\dots, p_n)$ 与点$\mathbf{q} = (q_1, q_2, q_3, \dots, q_n)$，那么点$\mathbf{p}$
+与点$\mathbf{q}$的距离，或者点$\mathbf{q}$与点$\mathbf{p}$的距离，由
+\autoref{equ:7}定义：
+\begin{align}
+d(\mathbf{p},\mathbf{q}) = d(\mathbf{q},\mathbf{p}) & = \sqrt{(q_1-p_1)^2
+                         + (q_2-p_2)^2 + \cdots + (q_n-p_n)^2} \notag \\
+\label{equ:7}
+& = \sqrt{\sum_{i=1}^n (q_i-p_i)^2}
+\end{align}
+\end{theorem}
+
+
+\section{交叉引用}
+
+与图表一样，公式、定理等也需要采用专用的命令或环境进行排版以实现
+编号、交叉引用等\emph{自动化}处理，\emph{万万不可}手动编号、引用！
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../main.tex"
+%%% End:

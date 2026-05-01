@@ -1,0 +1,185 @@
+% 本文件是示例论文的一部分
+% 论文的主文件位于上级目录的 `main.tex`
+\chapter{参考文献}
+
+为了规范我校学位论文写作，我校学位论文的参考文献采用采用
+\enquote{著者-出版年}制进行文献的引用与著录。
+
+\section{正文中参考文献的引用}
+\subsection{著者作为引用主语}
+文中提及著者，在被引用的著者姓名或外国著者姓氏之后用圆括号标注文献出版年，
+可使用\cs{textcite}、\cs{yearcite}命令或手动模式引用文献，如：
+
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \small
+    \verb|\textcite{赵耀东1998--}|指出...
+
+    赵耀东\verb|\yearcite{赵耀东1998--}|指出...
+
+    赵耀东\verb|(\cite*{赵耀东1998--})|指出...
+
+    张三\yearcite{r1}指出...
+
+    赵耀东\verb|(\citeyear{赵耀东1998--})|指出...
+  \end{minipage}
+  \begin{boxedminipage}{0.45\textwidth}
+    \small
+    \textcite{赵耀东1998--}指出...
+
+    赵耀东\yearcite{赵耀东1998--}指出...
+
+    赵耀东(\cite*{赵耀东1998--})指出...
+
+    赵耀东(\citeyear{赵耀东1998--})指出...
+  \end{boxedminipage}
+\end{center}
+
+\note{手动模式使用\cs{cite*}或\cs{citeyear}命令时，需要在两端加上小括号。}
+
+\subsection{提及内容未提及著者}
+
+文中只提及所引用的资料内容而未提及著者，则在引文叙述文字之后用圆括号标注著
+者姓名或外国著者姓氏和出版年份，在著者和年份之间空一格，此时可以使用
+\cs{cite}命令引用文献，如：
+
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \small
+    孟德尔发现了一个很重要的现象，即红、白花豌豆杂交后的所结种子
+      第二年长出的植株的红白花比例为3:1\verb|\cite{fzx1962}|。%
+  \end{minipage}
+  \begin{boxedminipage}{0.45\textwidth}
+    \small
+    孟德尔发现了一个很重要的现象，即红、白花豌豆杂交后的所结种子
+      第二年长出的植株的红白花比例为3:1\cite{fzx1962}。%
+  \end{boxedminipage}
+\end{center}
+
+\subsection{同一著者不同年份出版多篇文献}
+引用同一著者不同年份出版的多篇文献时，后者只注出版年；引用同一著者在同一年
+份出版的多篇文献时，无论正文还是文末，年份之后用英文小写字母 a、b、c 等加
+以区别。按年份递增顺序排列,不同文献之间用逗号隔开。此时可以使用\cs{cite}命
+令引用文献，如：
+
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \small
+    UML基础和Rose建模教程中给出了大量案例及案例分析\verb|\cite{蔡敏2006a--,蔡敏2006b--}|。%
+  \end{minipage}
+  \begin{boxedminipage}{0.45\textwidth}
+    \small
+    UML基础和Rose建模教程中给出了大量案例及案例分析\cite{蔡敏2006a--,蔡敏2006b--}。%
+  \end{boxedminipage}
+\end{center}
+
+\subsection{两著者文献}
+
+引用两个著者的文献时,两个著者之间加\enquote{和}(中文)或\enquote{and}(英文)。
+此时可以使用\cs{cite}命令引用文献，如：
+
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \small
+    利用基于Matlab的计算机仿真\verb|\cite{郭文彬2006--}|，研究了UWB和窄带通讯中
+      的信号共存特性\verb|\cite{Chiani2009-231-254}|。%
+  \end{minipage}
+  \begin{boxedminipage}{0.45\textwidth}
+    \small
+    利用基于Matlab的计算机仿真\cite{郭文彬2006--}，研究了UWB和窄带通讯中
+      的信号共存特性\cite{Chiani2009-231-254}。%
+  \end{boxedminipage}
+\end{center}
+
+\subsection{三个以上著者文献}
+
+引用三个以上著者时，只标注第一著者姓名，其后加\enquote{等}(中文)或
+\enquote{et al.}(英文)。此时可以使用\cs{cite}命令引用文献，如：
+
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \small
+    UML基础和Rose建模教程中详细说明了其基本方法和技巧\verb|\cite{蔡敏2006--}|。
+
+    你不好好学点\LaTeX{}基本命令还真不行\verb|\cite{r9}|。%
+  \end{minipage}
+  \begin{boxedminipage}{0.45\textwidth}
+    \small
+    UML基础和Rose建模教程中详细说明了其基本方法和技巧\cite{蔡敏2006--}。
+
+    你不好好学点\LaTeX{}基本命令还真不行\cite{r9}。%
+  \end{boxedminipage}
+\end{center}
+
+\subsection{同一处引用多篇文献}
+
+同一处引用多篇文献时，按著者字母顺序排列，不同著者文献之间用分号隔开。
+此时可以使用\cs{cite}命令引用文献，注意用逗号分开\texttt{citeKey}就好，如：
+
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \small
+    同时引用多个文献\verb|\cite{r2,r3,r4,r6}|。%
+  \end{minipage}
+  \begin{boxedminipage}{0.45\textwidth}
+    \small
+    同时引用多个文献\cite{r2,r3,r4,r6}。%
+  \end{boxedminipage}
+\end{center}
+
+\subsection{多次引用同一著者的同一文献}
+
+多次引用同一著者的同一文献,在正文中标注著者与出版年, 并在\enquote{()}内以
+以冒号形式标注引文页码。此时可以使用\cs{parencite}命令引用文献，注意用可选
+参数指定引用页码，如：
+
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \small
+    在文献\verb|\parencite[20-22]{n21}|说了一， 在文献\verb|\parencite[55-60]{n21}|说了二。%
+  \end{minipage}
+  \begin{boxedminipage}{0.45\textwidth}
+    \small
+    在文献\parencite[20-22]{n21}说了一， 在文献\parencite[55-60]{n21}说了二。%
+  \end{boxedminipage}
+\end{center}
+
+\note{关于著者-出版年样式命令的详细说明可参见胡振震\enquote{符合 GB/T
+  7714-2015 标准的 biblatex 参考文献样式}说明中的例12。}
+
+\section{参考文献列表}
+
+参考文献列表的输出只需要使用命令\cs{printbibliography}进行输出即可，如：
+
+% 排版参考文献表
+% \printbibliography%
+
+\section{参考文献数据文件准备}
+
+\LaTeX 文档中生成参考文献一般都需要准备一个参考文献数据源文件即\enquote{*.bib}
+文件。这一文件内保存有各条参考文献的信息，具体可以参考biblatex宏包手册和
+biblatex-gb7714-2015样式包手册\cite{胡振震2019}中关于域信息录入的说明。
+
+参考文献源文件本质上只是一个文本文件，只是其内容需要遵守BibTeX格式，参考文
+献源文件可以有多种生成方式，具体可参考\LaTeX{}文档中文参考文献的biblatex 
+解决方案\parencite[2.2节]{胡振震2016}。
+
+本模板采用由胡振震维护的
+\enquote{符合 GB/T 7714-2015 标准的 biblatex 参考文献样式}实现参考文献的编
+排\cite{胡振震2019}，其Github链接为
+\url{https://github.com/hushidong/biblatex-gb7714-2015}。
+大家也可以通过\TeX~Live的 \verb|texdoc gb7714-2015|命令查看其使用说明。
+
+关于著者-出版年样式命令的详细说明可参见胡振震\enquote{符合 GB/T7714-2015 
+标准的 biblatex 参考文献样式}说明中的中的相关内容
+\parencite[2.2、2.3节]{胡振震2016}。
+
+\section{交叉引用}
+\note{与图、表、公式、定理等一样，请使用专用命令引用并输出参考文献，以实现
+参考文献的\emph{自动化}处理，\emph{万万不可}手动编写参考文献}！
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../main.tex"
+%%% End:

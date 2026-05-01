@@ -1,0 +1,306 @@
+% 文档类(模板)
+\documentclass[%
+  type = bachelor,  % 本科论文(设计)
+  % oneside,        % 单面模式
+  twoside,          % 双面模式(openany)
+]{nwafuthesis}
+% 导言区
+
+% 将需要载入的宏包统一在settings/package.tex中进行管理
+\input{settings/packages.tex}
+% 将必要的设置统一在settings/format.tex中进行管理
+\input{settings/format.tex}
+
+% 编写测试文档用到的两个宏包，若不需要，可能删除
+% 中文乱数假文宏包
+\usepackage{zhlipsum}
+% 最小工作示例(MWE)宏包，主要用于插图示例
+\usepackage{mwe}
+
+% 排版设置
+\nwafuset{
+% 论文格式
+  style = {
+    % font          = times*,           % 选择英文字体(需要安装有该字体，建议自动配置)
+    % cjk-font      = adobe,            % 选择中文字体(需要安装有该字体，建议自动配置)
+    hyperlink     = color,            % 超链接颜色
+    % withchapter = false,            % 章标题是否为章模式(仅本科生需要)
+    bib-resource  = {bib/sample.bib}, % 参考文献数据源文件名，注意需要完整路径及后缀名
+    % anonymous = true,                 % 是否输出盲审格式论文
+  },
+% 信息录入
+  info = {
+    grade = {2022}, % 毕业年份(届)
+    enroll = {2018}, % 入学年份(级)
+    class-id = {1}, % 班级号
+    btype = {paper}, % 本科类型(论文/设计)
+    % btype = {design},
+    title = { \nwafuthesis{}快速上手示例文档 }, % 中文题目
+    title* = { \nwafuthesis{} Quick Start and Document Snippets }, % 英文题目
+    department = { 信息工程学院 }, % 学院名称
+    major = {计算机科学与技术}, % 专业
+    author = { \TeX{}爱好者 }, % 作者中文名称
+    supervisor = { 耿楠 }, % 指导教师
+    cosupervisor = {Donald Knuth 大师}, % 协助指导教师
+    date = {\datezh}, % 论文提交时间
+    student-id = {202101000}, % 学号
+    degree-title  = {工学学士},
+  },
+}
+% 录入摘要
+\nwafuset{
+  abstract = {
+    abstractfile  = { contents/chap00-abs-zh.tex }, % 中文摘要文件名称，注意需要有.tex后缀名
+    abstractfile* = { contents/chap00-abs-en.tex }, % 英文摘要文件名称，注意需要有.tex后缀名
+    keywords      = {学位论文, 模板, \nwafuthesis}, % 中文关键字列表，注意用英文逗号分隔。
+    keywords*     = {NWAFU thesis, document class, space is accepted here}, % 英文关键字列表，注意用英文逗号分隔
+  },
+}
+
+% ============================================================
+% 封面第一页重定义（无学号，严格间距，黑体20号/二号/小三）
+% ============================================================
+\ExplSyntaxOn
+\ctex_at_end_preamble:n
+  {
+    % 页面实例：无学号，增加英文标题，上方空 3 行
+    \__nwafu_declare_page:nn { cover-i-default }
+      {
+        content     = { logo, type, title, en-title, simple-info },
+        prefix      = cover / i /,
+        top-skip    = 2\normalbaselineskip,
+        bottom-skip = 0 pt plus 1 fill,
+      }
+
+    % logo 元素：下方空 1 行
+    \__nwafu_declare_element:nn { cover / i / logo }
+      {
+        content     = \__nwafu_cover_logo:,
+        bottom-skip = 1\normalbaselineskip,
+        align       = center,
+      }
+
+    % type 元素：黑体 20pt，函数内部控制字体
+    \__nwafu_declare_element:nn { cover / i / type }
+      {
+        content     = \__nwafu_cover_type:,
+        % bottom-skip = 1\normalbaselineskip,
+        align       = center,
+      }
+
+    % 中文标题：黑体二号加粗
+    \__nwafu_declare_element:nn { cover / i / title }
+      {
+        content     = \l__nwafu_info_title_tl,
+        format      = \sffamily \zihao{2} \bfseries,
+        % bottom-skip = 1\normalbaselineskip,
+        align       = center,
+      }
+
+    % 英文标题：Times New Roman 二号加粗，下方空 6 行
+    \__nwafu_declare_element:nn { cover / i / en-title }
+      {
+        content     = \l__nwafu_info_title_en_tl,
+        format      = \zihao{2} \bfseries,
+        bottom-skip = 3\normalbaselineskip,
+        align       = center,
+      }
+
+    % 作者+导师+日期：黑体小三，函数内部控制字体
+    \__nwafu_declare_element:nn { cover / i / simple-info }
+      {
+        content     = \__nwafu_cover_simple_info:,
+        bottom-skip = 0 pt,
+        align       = center,
+      }
+
+    % ---------- 封面用到的内部函数 ----------
+
+    % 届论文类型：黑体 20pt
+    \cs_set_protected:Npn \__nwafu_cover_type:
+      {
+        \group_begin:
+          \sffamily \fontsize{20pt}{28pt}\selectfont
+          \l__nwafu_info_grade_tl 届
+          \clist_item:Nn \c__nwafu_thesis_type_clist { \g__nwafu_thesis_type_int }
+          \clist_item:Nn \c__nwafu_bachelor_type_clist { \l__nwafu_info_bachelor_type_int }
+        \group_end:
+      }
+
+    % 作者、指导教师、日期：黑体小三，标签 8em 分散对齐，内容 10em 居中
+    \cs_set_protected:Npn \__nwafu_cover_simple_info:
+      {
+        \group_begin:
+          \centering
+          \sffamily \zihao{-3}
+          \makebox[6em][s]{作者} \c__nwafu_fwid_colon_tl \quad
+          \makebox[6em][c]{
+            \bool_if:NTF \l__nwafu_anonymous_bool
+              { \c__nwafu_name_anonname_tl }
+              { \l__nwafu_info_author_tl }
+          }
+          \par \vspace{1\normalbaselineskip}
+          \makebox[6em][s]{指导教师} \c__nwafu_fwid_colon_tl \quad
+          \makebox[6em][c]{
+            \bool_if:NTF \l__nwafu_anonymous_bool
+              { \c__nwafu_name_anonname_tl }
+              { \l__nwafu_info_supervisor_tl }
+          }
+          \par \vspace{4\normalbaselineskip}
+          \l__nwafu_info_date_tl
+        \group_end:
+      }
+  }
+\ExplSyntaxOff
+
+% ============================================================
+% 题名页详细信息系统重定义（黑体小三，1.5倍行距，日期上方3行）
+% ============================================================
+\ExplSyntaxOn
+% 重新定义题名页页面实例，压缩间距
+\ctex_at_end_preamble:n
+  {
+    \__nwafu_declare_page:nn { cover-ii-bachelor }
+      {
+        content     = { id, logo, type, title, en-title, detailed-info },
+        prefix      = cover / ii /,
+        top-skip    = 0pt,
+        bottom-skip = 0pt,
+      }
+    % id 元素：无下划线
+    \__nwafu_declare_element:nn { cover / ii / id }
+      {
+        content     =
+          {
+            \group_begin:
+              \rmfamily\zihao{-4}
+              \c__nwafu_name_student_id_tl \c__nwafu_fwid_colon_tl
+              \bool_if:NTF \l__nwafu_anonymous_bool
+                { \c__nwafu_name_anonid_tl }
+                { \l__nwafu_info_student_id_tl }
+            \group_end:
+          },
+        format      = ,
+        bottom-skip = 1.5\normalbaselineskip,
+        align       = right,
+      }
+
+    % logo 元素
+    \__nwafu_declare_element:nn { cover / ii / logo }
+      {
+        content     = \__nwafu_cover_logo:,
+        bottom-skip = 0.5\normalbaselineskip,
+        align       = center,
+      }
+    % type 元素：黑体20号（与封面一致）
+    \__nwafu_declare_element:nn { cover / ii / type }
+      {
+        content     = \__nwafu_cover_type:,
+        format      = \sffamily \fontsize{20pt}{28pt}\selectfont,
+        bottom-skip = 0.5\normalbaselineskip,
+        align       = center,
+      }
+    % 中文标题：黑体二号加粗
+    \__nwafu_declare_element:nn { cover / ii / title }
+      {
+        content     = \l__nwafu_info_title_tl,
+        format      = \sffamily \zihao{2} \bfseries,
+        bottom-skip = 0.5\normalbaselineskip,
+        align       = center,
+      }
+    % 英文标题：二号加粗
+    \__nwafu_declare_element:nn { cover / ii / en-title }
+      {
+        content     = \l__nwafu_info_title_en_tl,
+        format      = \zihao{2} \bfseries,
+        bottom-skip = 1.5\normalbaselineskip,
+        align       = center,
+      }
+  }
+
+% 信息函数（防止跨页，黑体小三）
+\cs_set_protected:Npn \__nwafu_cover_detailed_info:
+  {
+    \group_begin:
+      \centering
+      \RenewDocumentCommand \small {} {}
+      \sffamily \fontsize{15pt}{20pt}\selectfont
+      \begin{tabular}{ @{} r @{\hspace{0.5em}} c @{\hspace{0.5em}} l @{} }
+        \makebox[8em][s]{学生姓名} & ： &
+        \makebox[12em][c]{
+          \bool_if:NTF \l__nwafu_anonymous_bool
+            { \c__nwafu_name_anonname_tl }
+            { \l__nwafu_info_author_tl }
+        } \\[0.6\normalbaselineskip]
+        \makebox[8em][s]{指导教师} & ： &
+        \makebox[12em][c]{
+          \bool_if:NTF \l__nwafu_anonymous_bool
+            { \c__nwafu_name_anonname_tl }
+            { \l__nwafu_info_supervisor_tl }
+        } \\[0.6\normalbaselineskip]
+        \makebox[8em][s]{合作指导教师} & ： &
+        \makebox[12em][c]{
+          \bool_if:NTF \l__nwafu_anonymous_bool
+            { \c__nwafu_name_anonname_tl }
+            { \l__nwafu_info_cosupervisor_tl }
+        } \\[0.6\normalbaselineskip]
+        \makebox[8em][s]{申请学位类别} & ： &
+        \makebox[12em][c]{\l__nwafu_info_degree_title_tl}
+        \\[0.6\normalbaselineskip]
+        \makebox[8em][s]{专业名称} & ： &
+        \makebox[12em][c]{\l__nwafu_info_major_tl}
+        \\[0.6\normalbaselineskip]
+        \makebox[8em][s]{培养单位} & ： &
+        \makebox[12em][c]{\l__nwafu_info_department_tl}
+        \\[2\normalbaselineskip]      % 日期上方 2 行
+        \multicolumn{3}{c}{\l__nwafu_info_date_tl}
+      \end{tabular}
+    \group_end:
+  }
+\ExplSyntaxOff
+
+% 正文区(有且只能有一个)
+\begin{document}
+% 这个命令用来关闭版心底部强制对齐，
+% 可以减少不必要的 underfull \vbox 提示，但会影响排版效果
+% \raggedbottom
+
+% 由于论文模板中已设计了自动排版封面、摘要、目录等功能，
+% 因此，无需手动排版。
+
+% 主体部分是论文的核心
+
+\include{contents/fig-and-tab-list}
+\include{contents/fuhao-zhushibiao}
+\include{contents/shuyubiao}
+
+\mainmatter
+
+% 建议采用多文件编译的方式编写论文，
+% 比较好的做法是把每一章放进一个单独的 tex 文件里，
+% 并在这里用 \include 导入，如：
+\include{contents/chap01}
+\include{contents/chap02}
+\include{contents/chap03}
+\include{contents/chap04}
+\include{contents/chap05}
+\include{contents/chap06}
+%
+% 打印参考文献列表
+\bibmatter*
+\printbibliography
+
+% 排版附录，可选
+\appendix
+\input{contents/chap06-app1}
+\input{contents/chap07-app2}
+
+% 排版致谢
+\backmatter
+% 致谢
+\input{contents/chap08-ack}
+
+% 个人简历， 本科生可选
+\input{contents/resume}
+
+\end{document}

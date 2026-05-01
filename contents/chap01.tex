@@ -1,0 +1,107 @@
+% 本文件是示例论文的一部分
+% 论文的主文件是位于上级目录的 `main.tex`
+
+\chapter{快速上手}
+
+\section{欢迎}
+
+欢迎使用\nwafuthesis{}，本文档将以简单示例的方式介绍如何利用\nwafuthesis{}
+模板进行学位论文写作与排版。在此，本文假定学位论文作者已具备\LaTeX{}使用经
+验，并具备使用搜索引擎解决常见问题的能力。
+
+需要说明的是，本文档并非是一份\LaTeX{}零基础教程。如果是完完全全的新手，
+建议先阅读相关入门文档，如大名鼎鼎的\enquote{lshort-zh-cn.pdf}
+(\url{https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf})。
+同时，对于中文文档的排版，必须熟读\CTeX{}宏集手册\enquote{ctex.pdf}
+(\url{https://mirrors.tuna.tsinghua.edu.cn/CTAN/language/chinese/ctex/ctex.pdf})。
+当然，网络上诸如耿楠录制的\LaTeX{}教学系列视频等入门教程多如牛毛，可以自行
+选取学习。
+
+\section{\LaTeX 环境准备}
+
+由于\nwafuthesis{}基于\LaTeX3进行开发，用到了一些\LaTeX{}较新的特性和宏包，
+该模板后期不支持2021以下\TeX{}发行版，请及时升级发行版并更新所有宏包。
+例如，\TeX~Live2021或MiK~\TeX21.2之后的发行版。
+
+该模板的测试主要是在\TeX~Live2021+Ubuntu 20.04平台完成，并且\TeX~Live的已
+更新所有宏包。
+
+关于\LaTeX{}发行版的安装，强烈建议仔细阅读大名鼎鼎的\enquote{install-latex-guide-zh-cn.pdf}
+(\url{https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/install-latex-guide-zh-cn/install-latex-guide-zh-cn.pdf.pdf})。
+
+\section{模板使用}
+
+\subsection{工作流}
+使用{\nwafuthesis}模板排版学位论文的工作流如\ref{fig:workflow}所示。
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.85\textwidth]{figs/workflow}
+  \caption{模板工作流}
+  \label{fig:workflow}
+\end{figure}
+
+作为普通用户，仅需要通过{\LaTeX}发行版安装和更新模板，完成安装后，即可使用%
+\verb|\documentclass{nwafuthesis}|载入该模板进行工作了。作为普通用户，
+强烈建议只关心学位论文内容，通过与导师的反复沟通修改与完善论文内容即可。
+关于学位论文排版格式问题应该交由开发者根据根据相关学校%
+\emph{指南/规范}进行设计和调整。开发者完成模板开发及功能完善后，会上传到
+CTAN(\url{www.ctan.org})，然后模板会被部署于{\LaTeX}发行版，此时普通
+用户仅需要通过{\LaTeX}发行版的管理工具更新模板即可得到更新后的模板，
+模板更新再次编译学位论文即可按最新的格式要求完成排版。
+
+关于{\nwafuthesis}模板的使用的详细说明，一方面可以通过阅读其使用说明书和
+写作样例进行学习，另一方面也可以参阅耿楠在B站发布的教学视频%
+\url{https://www.bilibili.com/video/BV1tY4y1q7RT#reply107826496032}进行学习。
+
+{\nwafuthesis}模板的源代码托管于\url{https://gitee.com/nwafu_nan/nwafuthesis-l3}，
+如果有任何改进意见或者功能需求，欢迎前往 Gitee 仓库提交issue/PR，
+以便进一步完善和美化我校学位论文\LaTeX{}模板。
+
+\subsection{视觉识别系统图标}
+论文写作时，请确认\textbf{论文的目录}(\verb|main.tex|所在的目录)下有
+\enquote{logo/}文件夹，并内含以\enquote{nwafu-bar.pdf}和
+\enquote{nwafu-circle.pdf}命名的最新版学校视觉识别系统矢量版图标文件。
+
+如果论文目录下没有这些文件的话，请从本模板根目录复制一份。
+
+\section{开始写作}
+
+最方便的开始方法，莫过于修改现有的示例文稿，因此强烈推荐直接demo下的文
+档实现学位论文撰写。
+
+在撰写学位论文时，强烈建议按\ref{fig:dirforest}所示的目录结构组织和管理
+写作过程中的各个文件：
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.60\textwidth]{figs/filestree}
+  \caption{学位论文撰写目录结构}
+  \label{fig:dirforest}
+\end{figure}
+
+完成部分或所有\verb|*.tex|撰写和修改后，可以在命令行使用 \verb|latexmk -xelatex main|
+进行编译输出\verb|main.pdf|文件，可以根据需要对结果\texttt{pdf}文件进行改名。
+
+也可以使用\texttt{TeXstudio}、\texttt{vscode}等GUI编辑器的进行编辑和编译输出。
+关于这些编译器的配置和使用，请参阅相关说明资料。
+
+\note{}由于\nwafuthesis{}需要处理图、表、公式及参考文献等交叉引用，因此，
+往往需要多次编译才能得到正确的结果。为此，必须设置正确的编译方式和编译参数。
+关于多次编译的问题，大家可以浏览耿楠在B站发布的视频
+(\url{https://www.bilibili.com/video/BV1qa4y1v7my?spm_id_from=333.999.0.0})
+进行学习。
+
+\section{打印论文}
+
+如果论文需要双面打印的话，请务必修改文档类选项，编译双面打印用的 PDF 文件。
+具体地说，在主文件的头部，去除 \texttt{openany, oneside}，
+改成 \texttt{twoside}。
+
+同时，建议注释\cs{nwafuset}命令中的\enquote{style/hyperlink = color}，
+以\emph{取消超链接颜色}。
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main.tex"
+%%% End:
