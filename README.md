@@ -1,0 +1,2 @@
+# 2026_NWAFU_undergraduate_latex_template
+2026届西北农林科技大学本科生毕业论文latex模板
