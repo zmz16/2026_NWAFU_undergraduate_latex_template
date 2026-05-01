@@ -1,0 +1,25 @@
+## LaTeX 编译临时文件
+*.aux
+*.bcf
+*.log
+*.out
+*.synctex.gz
+*.run.xml
+*.thm
+*.toc
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+
+## 编辑器备份
+*.bak
+*.swp
+
+## 其他
+auto/
