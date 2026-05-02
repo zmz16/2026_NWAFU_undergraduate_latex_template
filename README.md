@@ -12,3 +12,5 @@
 3. main.tex中begin{decument}之前新增封面重定义内容。
 
 4. settings/package.tex文中新增两行关于字体配置信息。
+
+5. 在main.tex文件中\mainmatter之前include新建的术语表、主要符号注释表等内容。
